@@ -1,0 +1,41 @@
+<div class="container">
+
+
+  <h1>Youtube Playlist Creator</h1>
+  <% unless session[:user_id] %>
+  <a id="login" href="/">Login</a>
+    <form id="login_hide" method="post" action="/login">
+      <input type="textarea" name="username" placeholder="Username"></input>
+      <input type="textarea" name="email" placeholder="Email"></input>
+      <input type="password" name="password" placeholder="Password"></input>
+      <input id="login_submit" type="submit" value="submit"></input>
+    </form>
+  <a id="sign_up" href="/">Sign Up</a>
+   <form id="sign_up_hide" method="post" action="/sign_up">
+      <input type="textarea" name="username" placeholder="Username"></input>
+      <input type="textarea" name="email" placeholder="Email"></input>
+      <input type="password" name="password" placeholder="Password"></input>
+      <input id="sign_up_submit" type="submit" value="submit"></input>
+    </form>
+    <a id="log_out" href="/clear">Log Out!</a>
+    <% end %>
+
+    <% if session[:user_id] %>
+      <a href="/userpage">UserPage</a>
+      <a href="/clear">Log Out!</a>
+    <% end %>
+</div>
+<br>
+<!-- Have to display all the playlists -->
+
+
+
+
+
+
+
+
+
+
+
+
